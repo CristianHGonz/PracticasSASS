@@ -1,76 +1,61 @@
-@import "../utilities/variables";
+@use "../utilities/variables" as *;
+@use "../utilities/mixin-extend" as *;
 
-.inicio  {
-    background-color: $opacity;
-    background-image: url(../asset/images/playa.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-blend-mode: darken;
-    
+.inicio {
+  background-color: $opacity;
+  background-image: url(../asset/images/playa.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-blend-mode: darken;
 }
 
 .logo__ubicacion {
-    position: absolute;
-    left: 25%;
-    top: 2.5%;
-    img   {
+  position: absolute;
+  left: 25%;
+  top: 2.5%;
+  img {
     width: 4rem;
     height: 4rem;
-    }
-    }
+  }
+}
 .main__title {
-    position: fixed;
-    top: 3.5%;
-    left: 30%;
-    color:$primary-color;
-    text-align: center;
-    font-family: $secondary-text;
-    
+  position: fixed;
+  top: 3.5%;
+  left: 30%;
+  color: $primary-color;
+  text-align: center;
+  font-family: $secondary-text;
 }
 .subtitle1 {
-    position: fixed;
-    bottom: 60%;
-    left: 40%;
-    color:$primary-color;
-    font-size: 2.5rem;
-    font-family: $primary-text;
+  position: fixed;
+  bottom: 60%;
+  left: 40%;
+  color: $primary-color;
+  font-size: 2.5rem;
+  font-family: $primary-text;
 }
 .subtitle2 {
-    position: fixed;
-    bottom: 50%;
-    left: 25%;
-    color:$primary-color;
-    font-size: 4rem;
-    font-family: $primary-text;
+  position: fixed;
+  bottom: 50%;
+  left: 25%;
+  color: $primary-color;
+  font-size: 4rem;
+  font-family: $primary-text;
 }
 .subtitle3 {
-    position: fixed;
-    bottom: 43%;
-    left: 37%;
-    color:$primary-color;
-    font-size: 2.5rem;
-    font-family: $primary-text;
+  position: fixed;
+  bottom: 43%;
+  left: 37%;
+  color: $primary-color;
+  font-size: 2.5rem;
+  font-family: $primary-text;
 }
-.btn__primary{
-    position: fixed;
-    bottom: 23%;
-    left: 63%;
-    padding: 1rem 5rem;
-    border-radius: 30px ;
-    border: none;
-    background-color: orange;
-    font-weight: 600;
-    border: none;
-    a{
-        text-decoration: none;
-        color: $primary-color;
-        font-family: $primary-text;
-        
-    }
-}
-.btn__primary:hover{
-    
-    background-color: rgb(233, 95, 95);
+.btn__primary {
+  @extend .btn-primary;
+  position: fixed;
+  bottom: 23%;
+  left: 63%;
+  padding: 1rem 5rem;
 }

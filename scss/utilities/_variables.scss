@@ -1,12 +1,16 @@
 /* opacidades */
 $opacity: rgba(0, 0, 0, 0.3);
 
-/* colores de texto */ 
+/* colores de texto */
 $primary-color: #f4f4f4;
+$secondary-color: #323232;
 
 /* fuentes */
 $primary-text: "Roboto", sans-serif;
-$secondary-text:"Oswald", sans-serif;
+$secondary-text: "Oswald", sans-serif;
 
 /*fondos*/
-$bg-primary-color:#fdf6ea;
+$bg-primary-color: #fdf6ea;
+$bg-secondary-color: #f4f4f4;
+/* colores de botones */
+$btn-primary-color: orange;

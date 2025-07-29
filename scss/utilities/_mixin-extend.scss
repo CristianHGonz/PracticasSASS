@@ -1,0 +1,17 @@
+@use "../utilities/variables" as *;
+
+.btn-primary {
+  border-radius: 30px;
+  border: none;
+  background-color: $btn-primary-color;
+  font-weight: 600;
+  border: none;
+  a {
+    text-decoration: none;
+    color: $primary-color;
+    font-family: $primary-text;
+  }
+  .btn__primary:hover {
+    background-color: rgb(233, 95, 95);
+  }
+}

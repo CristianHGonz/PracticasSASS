@@ -1,9 +1,60 @@
-@import "../utilities/variables";
+@use "../utilities/variables" as *;
+@use "../utilities/mixin-extend" as *;
 .comenzamos {
-    background-color: $bg-primary-color !important;
-    background-image: none;
+  background-color: $bg-primary-color !important;
+}
+.comenzamos__logo {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+.comenzamos__content {
+  display: grid;
+  grid-template-areas:
+    "comenzamos__img title title"
+    "comenzamos__img text1 text1"
+    "comenzamos__img btn1 btn2";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 5rem;
 }
 
-p { 
-    color: red;
+.comenzamos__img {
+  grid-area: comenzamos__img;
+  align-content: center;
+  text-align: center;
+}
+.title {
+  grid-area: title;
+  text-align: center;
+  align-content: flex-end;
+  font-family: $secondary-text;
+  color: $secondary-color;
+  font-size: 2.5rem;
+}
+.text1 {
+  grid-area: text1;
+  font-family: $primary-text;
+  text-align: center;
+  margin: 2rem 0;
+}
+.btn1 {
+  grid-area: btn1;
+  @extend .btn-primary;
+}
+.btn2 {
+  grid-area: btn2;
+  @extend .btn-primary;
+  padding: 20px;
+}
+
+.comenzamos__img--feliz {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 3rem;
 }
