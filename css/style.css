@@ -1,0 +1,105 @@
+/* opacidades */
+/* colores de texto */
+/* fuentes */
+/*fondos*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* opacidades */
+/* colores de texto */
+/* fuentes */
+/*fondos*/
+.inicio {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: url(../asset/images/playa.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-blend-mode: darken;
+}
+
+.logo__ubicacion {
+  position: absolute;
+  left: 25%;
+  top: 2.5%;
+}
+.logo__ubicacion img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.main__title {
+  position: fixed;
+  top: 3.5%;
+  left: 30%;
+  color: #f4f4f4;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+
+.subtitle1 {
+  position: fixed;
+  bottom: 60%;
+  left: 40%;
+  color: #f4f4f4;
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.subtitle2 {
+  position: fixed;
+  bottom: 50%;
+  left: 25%;
+  color: #f4f4f4;
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.subtitle3 {
+  position: fixed;
+  bottom: 43%;
+  left: 37%;
+  color: #f4f4f4;
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn__primary {
+  position: fixed;
+  bottom: 23%;
+  left: 63%;
+  padding: 1rem 5rem;
+  border-radius: 30px;
+  border: none;
+  background-color: orange;
+  font-weight: 600;
+  border: none;
+}
+.btn__primary a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn__primary:hover {
+  background-color: rgb(233, 95, 95);
+}
+
+/* opacidades */
+/* colores de texto */
+/* fuentes */
+/*fondos*/
+.comenzamos {
+  background-color: #fdf6ea !important;
+  background-image: none;
+}
+
+p {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
