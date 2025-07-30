@@ -3,26 +3,17 @@
 .comenzamos {
   background-color: $bg-primary-color !important;
 }
-.comenzamos__logo {
-  position: absolute;
-  right: 43%;
-  top: 9%;
-  img {
-    width: 6rem;
-    height: 6rem;
-  }
-}
+
 .comenzamos__content {
   display: grid;
   grid-template-areas:
     "comenzamos__img title title"
     "comenzamos__img text1 text1"
     "comenzamos__img btn1 btn2";
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.25fr 0.75fr 1fr;
   grid-template-rows: auto;
   gap: 1rem;
   margin: 0;
-  
 }
 
 .comenzamos__img {
@@ -46,23 +37,24 @@
   margin-top: 1rem;
   font-size: 1rem;
   text-align: center;
-  
-
-  
 }
 .btn1 {
   grid-area: btn1;
   @extend .btn-primary;
+  justify-self: center;
+  align-self: center;
 }
-.btn1:hover{
-    background-color: rgb(233, 95, 95);
+.btn1:hover {
+  background-color: rgb(233, 95, 95);
 }
 .btn2 {
   grid-area: btn2;
- @extend .btn-primary;
+  align-self: center;
+  @extend .btn-primary;
+  justify-self: center;
 }
-.btn2:hover{
-    background-color: rgb(233, 95, 95);
+.btn2:hover {
+  background-color: rgb(233, 95, 95);
 }
 .comenzamos__img--feliz {
   width: 40rem;
@@ -76,32 +68,32 @@
   border-radius: 3rem;
   margin: 0 4rem;
 }
-.btn-mod{
- @extend .btn-tamano
+.btn-mod {
+  @extend .btn-tamano;
+  text-align: center;
 }
 
 .comenzamos__img {
-  position: relative; /* Para posicionar las imágenes */
-  width: 40rem; /* Ajusta el tamaño deseado */
+  position: relative;
+  width: 40rem;
   height: 30rem;
-  overflow: hidden; /* Oculta el desbordamiento de la rotación */
+  overflow: hidden;
 }
 
 .comenzamos__img:hover .comenzamos__img--feliz0 {
-  transform: rotate(360deg); /* Rota la imagen original */
-  transition: transform 0.5s ease; /* Añade una transición suave */
-  opacity: 0; /* La hace desaparecer */
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+  opacity: 0;
 }
 
 .comenzamos__img .comenzamos__img--feliz {
-  position: absolute; /* Se superpone a la original */
-  top: 0;
+  position: absolute;
   left: 0;
-  width: 100%; /* Asegura que ocupe todo el contenedor */
+  width: 100%;
   height: 100%;
-  opacity: 0; /* Inicialmente invisible */
+  opacity: 0;
 }
 
 .comenzamos__img:hover .comenzamos__img--feliz {
-  opacity: 1; /* La muestra al pasar el mouse */
+  opacity: 1;
 }
