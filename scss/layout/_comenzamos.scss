@@ -5,8 +5,8 @@
 }
 .comenzamos__logo {
   position: absolute;
-  left: 10%;
-  top: 5%;
+  right: 43%;
+  top: 9%;
   img {
     width: 6rem;
     height: 6rem;
@@ -19,14 +19,15 @@
     "comenzamos__img text1 text1"
     "comenzamos__img btn1 btn2";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 1rem;
-  margin-top: 5rem;
+  margin: 0;
+  
 }
 
 .comenzamos__img {
   grid-area: comenzamos__img;
-  align-content: center;
+  margin-top: 3rem;
   text-align: center;
 }
 .title {
@@ -36,25 +37,71 @@
   font-family: $secondary-text;
   color: $secondary-color;
   font-size: 2.5rem;
+  margin-top: 1rem;
 }
 .text1 {
   grid-area: text1;
   font-family: $primary-text;
+  margin-right: 4rem;
+  margin-top: 1rem;
+  font-size: 1rem;
   text-align: center;
-  margin: 2rem 0;
+  
+
+  
 }
 .btn1 {
   grid-area: btn1;
   @extend .btn-primary;
 }
+.btn1:hover{
+    background-color: rgb(233, 95, 95);
+}
 .btn2 {
   grid-area: btn2;
-  @extend .btn-primary;
-  padding: 20px;
+ @extend .btn-primary;
+}
+.btn2:hover{
+    background-color: rgb(233, 95, 95);
+}
+.comenzamos__img--feliz {
+  width: 40rem;
+  height: 30rem;
+  border-radius: 3rem;
+  margin: 0 4rem;
+}
+.comenzamos__img--feliz0 {
+  width: 40rem;
+  height: 30rem;
+  border-radius: 3rem;
+  margin: 0 4rem;
+}
+.btn-mod{
+ @extend .btn-tamano
 }
 
-.comenzamos__img--feliz {
-  width: 25rem;
-  height: 25rem;
-  border-radius: 3rem;
+.comenzamos__img {
+  position: relative; /* Para posicionar las imágenes */
+  width: 40rem; /* Ajusta el tamaño deseado */
+  height: 30rem;
+  overflow: hidden; /* Oculta el desbordamiento de la rotación */
+}
+
+.comenzamos__img:hover .comenzamos__img--feliz0 {
+  transform: rotate(360deg); /* Rota la imagen original */
+  transition: transform 0.5s ease; /* Añade una transición suave */
+  opacity: 0; /* La hace desaparecer */
+}
+
+.comenzamos__img .comenzamos__img--feliz {
+  position: absolute; /* Se superpone a la original */
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el contenedor */
+  height: 100%;
+  opacity: 0; /* Inicialmente invisible */
+}
+
+.comenzamos__img:hover .comenzamos__img--feliz {
+  opacity: 1; /* La muestra al pasar el mouse */
 }

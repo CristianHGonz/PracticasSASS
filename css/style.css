@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* opacidades */
 /* colores de texto */
 /* fuentes */
@@ -15,8 +16,10 @@
   color: #f4f4f4;
   font-family: "Roboto", sans-serif;
 }
-.btn-primary .btn__primary:hover, .btn1 .btn__primary:hover, .btn2 .btn__primary:hover, .btn__primary .btn__primary:hover {
-  background-color: rgb(233, 95, 95);
+
+.btn-tamano, .btn-mod {
+  width: 15rem;
+  height: 3rem;
 }
 
 * {
@@ -94,8 +97,8 @@
 
 .comenzamos__logo {
   position: absolute;
-  left: 10%;
-  top: 5%;
+  right: 43%;
+  top: 9%;
 }
 .comenzamos__logo img {
   width: 6rem;
@@ -106,14 +109,14 @@
   display: grid;
   grid-template-areas: "comenzamos__img title title" "comenzamos__img text1 text1" "comenzamos__img btn1 btn2";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 1rem;
-  margin-top: 5rem;
+  margin: 0;
 }
 
 .comenzamos__img {
   grid-area: comenzamos__img;
-  align-content: center;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -124,28 +127,72 @@
   font-family: "Oswald", sans-serif;
   color: #323232;
   font-size: 2.5rem;
+  margin-top: 1rem;
 }
 
 .text1 {
   grid-area: text1;
   font-family: "Roboto", sans-serif;
+  margin-right: 4rem;
+  margin-top: 1rem;
+  font-size: 1rem;
   text-align: center;
-  margin: 2rem 0;
 }
 
 .btn1 {
   grid-area: btn1;
 }
 
+.btn1:hover {
+  background-color: rgb(233, 95, 95);
+}
+
 .btn2 {
   grid-area: btn2;
-  padding: 20px;
+}
+
+.btn2:hover {
+  background-color: rgb(233, 95, 95);
 }
 
 .comenzamos__img--feliz {
-  width: 25rem;
-  height: 25rem;
+  width: 40rem;
+  height: 30rem;
   border-radius: 3rem;
+  margin: 0 4rem;
+}
+
+.comenzamos__img--feliz0 {
+  width: 40rem;
+  height: 30rem;
+  border-radius: 3rem;
+  margin: 0 4rem;
+}
+
+.comenzamos__img {
+  position: relative; /* Para posicionar las imágenes */
+  width: 40rem; /* Ajusta el tamaño deseado */
+  height: 30rem;
+  overflow: hidden; /* Oculta el desbordamiento de la rotación */
+}
+
+.comenzamos__img:hover .comenzamos__img--feliz0 {
+  transform: rotate(360deg); /* Rota la imagen original */
+  transition: transform 0.5s ease; /* Añade una transición suave */
+  opacity: 0; /* La hace desaparecer */
+}
+
+.comenzamos__img .comenzamos__img--feliz {
+  position: absolute; /* Se superpone a la original */
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el contenedor */
+  height: 100%;
+  opacity: 0; /* Inicialmente invisible */
+}
+
+.comenzamos__img:hover .comenzamos__img--feliz {
+  opacity: 1; /* La muestra al pasar el mouse */
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,7 +11,10 @@
     color: $primary-color;
     font-family: $primary-text;
   }
-  .btn__primary:hover {
-    background-color: rgb(233, 95, 95);
-  }
+}
+
+.btn-tamano {
+  width: 15rem;
+ height: 3rem;
+ 
 }
