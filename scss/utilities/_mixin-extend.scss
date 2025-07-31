@@ -1,6 +1,6 @@
 @use "../utilities/variables" as *;
 
-.btn-primary {
+.btn-primary { //formato de botones
   border-radius: 30px;
   border: none;
   background-color: $btn-primary-color;
@@ -13,7 +13,26 @@
   }
 }
 
-.btn-tamano {
+.btn-tamano { //tamaño de los botones
   width: 15rem;
   height: 3rem;
+}
+
+@mixin link($color) { //link de la barra de nav
+  color: $color;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: $secondary-text;
+  letter-spacing: 0.2rem;
+}
+
+@mixin logo($text-color) { // texto de logo en nav
+      margin: 1rem 1rem;
+      color: $text-color;
+      font-family: $secondary-text;
+      font-weight: 200;
+      font-size: 1.5rem;
 }

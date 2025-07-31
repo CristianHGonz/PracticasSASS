@@ -1,8 +1,10 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixin-extend" as *;
+@use "../utilities/animaciones" as *;
 .comenzamos {
   background-color: $bg-primary-color !important;
 }
+
 
 .comenzamos__content {
   display: grid;
@@ -10,15 +12,16 @@
     "comenzamos__img title title"
     "comenzamos__img text1 text1"
     "comenzamos__img btn1 btn2";
-  grid-template-columns: 1.25fr 0.75fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  gap: 1rem;
-  margin: 0;
+  gap: 3rem;
+  
+  
 }
 
 .comenzamos__img {
   grid-area: comenzamos__img;
-  margin-top: 3rem;
+  margin-top: 10rem;
   text-align: center;
 }
 .title {
@@ -27,73 +30,75 @@
   align-content: flex-end;
   font-family: $secondary-text;
   color: $secondary-color;
-  font-size: 2.5rem;
-  margin-top: 1rem;
+  font-size: 3.5rem;
+  margin-top: 10rem;
 }
 .text1 {
   grid-area: text1;
   font-family: $primary-text;
   margin-right: 4rem;
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
+
+
+  
 }
 .btn1 {
   grid-area: btn1;
   @extend .btn-primary;
-  justify-self: center;
-  align-self: center;
 }
-.btn1:hover {
-  background-color: rgb(233, 95, 95);
-}
+
 .btn2 {
   grid-area: btn2;
-  align-self: center;
-  @extend .btn-primary;
-  justify-self: center;
+ @extend .btn-primary;
 }
-.btn2:hover {
-  background-color: rgb(233, 95, 95);
-}
+
 .comenzamos__img--feliz {
   width: 40rem;
   height: 30rem;
-  border-radius: 3rem;
-  margin: 0 4rem;
+  /*border-radius: 3rem;*/
+   margin: 0 4rem;
+   z-index: 1;
 }
 .comenzamos__img--feliz0 {
   width: 40rem;
   height: 30rem;
-  border-radius: 3rem;
+  /*border-radius: 3rem;*/
   margin: 0 4rem;
+  
+  
 }
-.btn-mod {
-  @extend .btn-tamano;
-  text-align: center;
+.btn-mod{
+ @extend .btn-tamano;
+ @extend .btn-animacion;
+ align-self: center;
+ justify-self:center;
+}
+.btn-mod:hover,
+.btn-mod:focus,
+.btn-mod:active {
+  box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+  transform: scale(1.2);
 }
 
 .comenzamos__img {
-  position: relative;
-  width: 40rem;
+  position: relative; 
+  width: 40rem; 
   height: 30rem;
-  overflow: hidden;
-}
-
-.comenzamos__img:hover .comenzamos__img--feliz0 {
-  transform: rotate(360deg);
-  transition: transform 0.5s ease;
-  opacity: 0;
+  overflow: hidden; 
 }
 
 .comenzamos__img .comenzamos__img--feliz {
-  position: absolute;
+  position: absolute; 
+  top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; 
   height: 100%;
-  opacity: 0;
+  opacity: 0; 
 }
 
 .comenzamos__img:hover .comenzamos__img--feliz {
-  opacity: 1;
+  opacity: 1; 
+    
 }

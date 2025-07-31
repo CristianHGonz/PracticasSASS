@@ -20,10 +20,99 @@
   height: 3rem;
 }
 
+/*animacion de boton*/
+.btn-animacion, .btn-mod, .btn__primary {
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.nav__bar {
+  background-color: rgba(50, 50, 50, 0.0235294118);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  margin-top: 0;
+  z-index: 100;
+}
+.nav__bar .nav__bar--empresa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__bar .nav__bar--empresa .nav_bar--logo {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 3rem;
+  margin-top: 0.5rem;
+}
+.nav__bar .nav__bar--empresa .main__title {
+  margin: 1rem 1rem;
+  color: #f4f4f4;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+.nav__bar .nav__bar--empresa .main__title--comenzamos {
+  margin: 1rem 1rem;
+  color: #323232;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+.nav__bar .nav__bar--empresa .main__title--promociones {
+  margin: 1rem 1rem;
+  color: #f4f4f4;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+.nav__bar ul {
+  display: flex;
+}
+.nav__bar ul li {
+  margin: 0 2rem;
+  list-style: none;
+}
+.nav__bar ul li .link--index {
+  color: #f4f4f4;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.2rem;
+}
+.nav__bar ul li .link--comenzamos {
+  color: #323232;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.2rem;
+}
+.nav__bar ul li .link--promociones {
+  color: #f4f4f4;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.2rem;
 }
 
 .inicio {
@@ -36,29 +125,10 @@
   background-blend-mode: darken;
 }
 
-.logo__ubicacion {
-  position: absolute;
-  left: 25%;
-  top: 2.5%;
-}
-.logo__ubicacion img {
-  width: 4rem;
-  height: 4rem;
-}
-
-.main__title {
-  position: fixed;
-  top: 3.5%;
-  left: 30%;
-  color: #f4f4f4;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-}
-
 .subtitle1 {
   position: fixed;
   bottom: 60%;
-  left: 40%;
+  left: 20%;
   color: #f4f4f4;
   font-size: 2.5rem;
   font-family: "Roboto", sans-serif;
@@ -89,6 +159,13 @@
   padding: 1rem 5rem;
 }
 
+.btn__primary:hover,
+.btn__primary:focus,
+.btn__primary:active {
+  box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+  transform: scale(1.2);
+}
+
 .comenzamos {
   background-color: #fdf6ea !important;
 }
@@ -96,15 +173,14 @@
 .comenzamos__content {
   display: grid;
   grid-template-areas: "comenzamos__img title title" "comenzamos__img text1 text1" "comenzamos__img btn1 btn2";
-  grid-template-columns: 1.25fr 0.75fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  gap: 1rem;
-  margin: 0;
+  gap: 3rem;
 }
 
 .comenzamos__img {
   grid-area: comenzamos__img;
-  margin-top: 3rem;
+  margin-top: 10rem;
   text-align: center;
 }
 
@@ -114,8 +190,8 @@
   align-content: flex-end;
   font-family: "Oswald", sans-serif;
   color: #323232;
-  font-size: 2.5rem;
-  margin-top: 1rem;
+  font-size: 3.5rem;
+  margin-top: 10rem;
 }
 
 .text1 {
@@ -123,46 +199,43 @@
   font-family: "Roboto", sans-serif;
   margin-right: 4rem;
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
 .btn1 {
   grid-area: btn1;
-  justify-self: center;
-  align-self: center;
-}
-
-.btn1:hover {
-  background-color: rgb(233, 95, 95);
 }
 
 .btn2 {
   grid-area: btn2;
-  align-self: center;
-  justify-self: center;
-}
-
-.btn2:hover {
-  background-color: rgb(233, 95, 95);
 }
 
 .comenzamos__img--feliz {
   width: 40rem;
   height: 30rem;
-  border-radius: 3rem;
+  /*border-radius: 3rem;*/
   margin: 0 4rem;
+  z-index: 1;
 }
 
 .comenzamos__img--feliz0 {
   width: 40rem;
   height: 30rem;
-  border-radius: 3rem;
+  /*border-radius: 3rem;*/
   margin: 0 4rem;
 }
 
 .btn-mod {
-  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.btn-mod:hover,
+.btn-mod:focus,
+.btn-mod:active {
+  box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+  transform: scale(1.2);
 }
 
 .comenzamos__img {
@@ -172,14 +245,9 @@
   overflow: hidden;
 }
 
-.comenzamos__img:hover .comenzamos__img--feliz0 {
-  transform: rotate(360deg);
-  transition: transform 0.5s ease;
-  opacity: 0;
-}
-
 .comenzamos__img .comenzamos__img--feliz {
   position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -194,17 +262,22 @@
   background-color: #504128;
 }
 
-.promo__title {
-  color: #f4f4f4;
-  text-align: center;
-  margin-top: 2rem;
-  font-family: "Oswald", sans-serif;
-  font-size: 2.5rem;
-}
-
+/*main h2 {
+ color: $primary-color;
+ text-align: center;
+ margin-top: 3rem;
+ font-family: $secondary-text;
+ font-size: 2.5rem;
+ border: 4px solid blue;
+}*/
 .promo__contenedor {
   display: flex;
   flex-direction: row;
+  margin-top: 30rem;
+  border: 3px solid yellow;
+  width: 100rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .box-contenedor {

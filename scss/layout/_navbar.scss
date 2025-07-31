@@ -1,0 +1,52 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin-extend" as *;
+
+.nav__bar {
+  background-color: #32323206;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  margin-top: 0;
+  z-index: 100;
+  .nav__bar--empresa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nav_bar--logo {
+      width: 4rem;
+      height: 4rem;
+      margin-left: 3rem;
+      margin-top: 0.5rem;
+    }
+    .main__title {
+      @include logo($primary-color);
+    }
+    .main__title--comenzamos {
+      @include logo($secondary-color);
+    }
+    .main__title--promociones {
+      @include logo($primary-color);
+    }
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      margin: 0 2rem;
+      list-style: none;
+      .link--index {
+        @include link($primary-color);
+      }
+      .link--comenzamos {
+        @include link($secondary-color);
+      }
+      .link--promociones {
+        @include link($primary-color);
+      }
+    }
+  }
+}

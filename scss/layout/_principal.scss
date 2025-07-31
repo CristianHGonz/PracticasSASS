@@ -1,5 +1,7 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixin-extend" as *;
+@use "../utilities/animaciones" as *;
+
 
 .inicio {
   background-color: $opacity;
@@ -11,27 +13,13 @@
   background-blend-mode: darken;
 }
 
-.logo__ubicacion {
-  position: absolute;
-  left: 25%;
-  top: 2.5%;
-  img {
-    width: 4rem;
-    height: 4rem;
-  }
-}
-.main__title {
-  position: fixed;
-  top: 3.5%;
-  left: 30%;
-  color: $primary-color;
-  text-align: center;
-  font-family: $secondary-text;
-}
+
+
+
 .subtitle1 {
   position: fixed;
   bottom: 60%;
-  left: 40%;
+  left: 20%;
   color: $primary-color;
   font-size: 2.5rem;
   font-family: $primary-text;
@@ -58,4 +46,16 @@
   bottom: 23%;
   left: 63%;
   padding: 1rem 5rem;
+}
+
+
+.btn__primary  {
+@extend .btn-animacion 
+}
+
+.btn__primary:hover,
+.btn__primary:focus,
+.btn__primary:active {
+  box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+  transform: scale(1.2);
 }
