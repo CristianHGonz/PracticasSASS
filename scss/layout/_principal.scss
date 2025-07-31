@@ -2,19 +2,15 @@
 @use "../utilities/mixin-extend" as *;
 @use "../utilities/animaciones" as *;
 
-
 .inicio {
   background-color: $opacity;
-  background-image: url(../asset/images/playa.jpg);
+  background-image: url(/asset/images/index/playa.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-blend-mode: darken;
 }
-
-
-
 
 .subtitle1 {
   position: fixed;
@@ -48,9 +44,8 @@
   padding: 1rem 5rem;
 }
 
-
-.btn__primary  {
-@extend .btn-animacion 
+.btn__primary {
+  @extend .btn-animacion;
 }
 
 .btn__primary:hover,
