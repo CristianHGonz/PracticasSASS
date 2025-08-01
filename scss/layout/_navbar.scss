@@ -30,13 +30,16 @@
     .main__title--promociones {
       @include logo($primary-color);
     }
+    .main__title--viajes {
+      @include logo($secondary-color);
+    }
   }
 
   ul {
     display: flex;
 
     li {
-      margin: 0 2rem;
+      margin: 0 1rem;
       list-style: none;
       .link--index {
         @include link($primary-color);
@@ -47,6 +50,19 @@
       .link--promociones {
         @include link($primary-color);
       }
+      .link--viajes {
+        @include link($secondary-color);
+      }
     }
   }
+}
+.nav__bar--comenzamos {
+  background-color: $bg-primary-color;
+}
+.nav__bar--promo {
+  background-color: $bg-promociones-color;
+}
+
+.nav__bar--viajes {
+  background-color: $bg-primary-color;
 }

@@ -1,36 +1,60 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixin-extend" as *;
+@use "../utilities/animaciones" as *;
 .promociones {
   background-color: $bg-promociones-color;
 }
-/*main h2 {
-  color: $primary-color;
-  text-align: center;
-  margin-top: 3rem;
-  font-family: $secondary-text;
-  font-size: 2.5rem;
-  border: 4px solid blue;
- }*/
+.title__promociones {
+ @include title($primary-color)  ;
+ }
 
 .promo__contenedor {
   display: flex;
   flex-direction: row;
-  margin-top: 10rem;
-  border: 3px solid yellow;
-  width: 100rem;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  width: 80%;
   align-self: center;
   justify-self: center;
+  justify-content: center;
+  background-color: olive;
 }
 .box-contenedor {
-  border: 3px solid blue;
-  width: 32%;
-  height: 25rem;
-  text-align: center;
-  color: $primary-color;
-  margin: 1rem;
-  overflow: hidden;
-  object-fit: cover;
-  img {
-    width: 100%;
+  @extend .card__promo--box;
+
+  h3 {
+    margin: 5px 0;
+    font-family: $primary-text;
   }
+
+  img {
+    @extend .card__promo--img;
+  } 
+  .box-contenedor__text{
+    text-align: center;
+    margin-top: 0.5rem;
+    font-family: $primary-text;
+    font-weight: bolder;
+    text-decoration: underline
+
+  }
+  .btn__promo {
+    @extend .btn-primary;
+    @extend .btn-tamano;
+    margin-top: 1rem;
+    @extend .btn-animacion;
+  }
+  .btn__promo:hover,
+  .btn__promo:focus,
+  .btn_promo:active {
+    box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+    transform: scale(1.2);
+    background-color: rgb(231, 139, 108);
+  }
+}
+
+ul,
+ol {
+  margin-left: 3rem;
+  text-align: left;
 }

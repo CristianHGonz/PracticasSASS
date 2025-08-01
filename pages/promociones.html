@@ -9,7 +9,7 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="/css/style.css"
+      href="../css/style.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,12 +20,12 @@
   </head>
   <body class="promociones">
     <header>
-      <nav class="nav__bar">
+      <nav class="nav__bar nav__bar--promo">
         <div class="nav__bar--empresa">
           <img
             class="nav_bar--logo"
             src="../asset/images/pngwing.com.png"
-            alt=""
+            alt="Logo empresa de viajes"
           />
           <p class="main__title--promociones">
             <strong> Sueños SinFronteras </strong> <br />
@@ -33,31 +33,61 @@
           </p>
         </div>
         <ul>
-          <li><a class="link--promociones" href="/index.html">HOME</a></li>
-          <li>
+          <li class="nav__li"><a class="link--promociones" href="/index.html">HOME</a></li>
+          <li class="nav__li">
             <a class="link--promociones" href="comenzamos.html">NOSOTROS</a>
           </li>
-          <li><a class="link--promociones" href="http://">PROMOS</a></li>
-          <li><a class="link--promociones" href="http://">VIAJES</a></li>
-          <li><a class="link--promociones" href="http://">VIAJEROS</a></li>
-          <li><a class="link--promociones" href="http://">CONTACTO</a></li>
+          <li class="nav__li"><a class="link--promociones" href="promociones.html">PROMOS</a></li>
+          <li class="nav__li"><a class="link--promociones" href="viajes.html">VIAJES</a></li>
+          <li class="nav__li"><a class="link--promociones" href="http://">EXPERIENCIAS</a></li>
+          <li class="nav__li"><a class="link--promociones" href="http://">CONTACTO</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>PROMOCIONES</h2>
+      <h2 class="title__promociones">PROMOCIONES</h2>
 
       <div class="promo__contenedor">
         <div class="promo1 box-contenedor">
-          <img class="foto1" src="../asset/images/promos/caribe-2.jpg" alt="" />
+          <img class="foto1" src="../asset/images/promos/playa-promo.jpg" alt="foto de playa" />
+          <h3>Playas Paradisíacas</h3>
           <ul>
-            <li>pururu</li>
-            <li>patata</li>
-            <li>membrillo</li>
-          </ul>
-        </div>
-        <div class="promo2 box-contenedor">promo 2</div>
-        <div class="promo3 box-contenedor">promo 3</div>
+                <li>Vuelo directo</li>
+                <li>Transporte  sin cargo</li>
+                <li>10D/8N, habitación doble</li>
+                <li>All inclusive</li>
+                <li>Excursiones por islas</li>
+              </ul>
+              <p class="box-contenedor__text">$30.000</p>
+              <button class="btn__promo"><a href="http://">MAS INFO</a></button>
+            </div>
+            <div class="promo2 box-contenedor">    
+              <img class="foto1" src="../asset/images/promos/cruceros.jpg" alt="foto de Crucero" />
+              
+             <h3>Cruceros</h3>
+          <ul>
+                <li>Traslados</li>
+                <li>Amplios camarotes</li>
+                <li>15D/13N, habitación doble</li>
+                <li>All inclusive</li>
+                <li>Servicio de spa</li>
+              </ul>
+              <p class="box-contenedor__text">$20.000</p>
+              <button class="btn__promo"><a href="http://">MAS INFO</a></button>
+           </div>
+            <div class="promo3 box-contenedor">    <img class="foto1" src="../asset/images/promos/aventura.jpg" alt="foto de turismo aventura" />
+          <h3>Cruceros</h3>
+          <ul>
+                <li>Aventuras únicas</li>
+                <li>Noches bajo las estrellas</li>
+                <li>Tranquilidad</li>
+                <li>Experiencias únicas</li>
+                <li>Guías experimentados</li>
+              </ul>
+              <p class="box-contenedor__text">$15.000</p>
+              <button class="btn__promo"><a href="http://">MAS INFO</a></button>
+           </div>
+      
       </div>
     </main>
   </body>

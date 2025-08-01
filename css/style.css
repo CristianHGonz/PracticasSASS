@@ -3,25 +3,44 @@
 /* fuentes */
 /*fondos*/
 /* colores de botones */
-.btn-primary, .btn1, .btn2, .btn__primary {
+.btn-primary, .box-contenedor .btn__promo, .btn1, .btn2, .btn__primary {
   border-radius: 30px;
   border: none;
   background-color: orange;
   font-weight: 600;
 }
-.btn-primary a, .btn1 a, .btn2 a, .btn__primary a {
+.btn-primary a, .box-contenedor .btn__promo a, .btn1 a, .btn2 a, .btn__primary a {
   text-decoration: none;
   color: #f4f4f4;
   font-family: "Roboto", sans-serif;
 }
 
-.btn-tamano, .btn-mod {
+.btn-tamano, .box-contenedor .btn__promo, .btn-mod {
   width: 15rem;
   height: 3rem;
 }
 
+.card__promo--box, .box-contenedor { /*caja de ofertas en promo*/
+  width: 20rem;
+  height: 34rem;
+  text-align: center;
+  background-color: #fdf6ea;
+  color: #323232;
+  margin: 1rem;
+  overflow: hidden;
+  object-fit: cover;
+  font-size: 1.25rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.card__promo--img, .box-contenedor img { /*imagen de promo*/
+  width: 100%;
+  height: 50%;
+}
+
 /*animacion de boton*/
-.btn-animacion, .btn-mod, .btn__primary {
+.btn-animacion, .box-contenedor .btn__promo, .btn-mod, .btn__primary {
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   transition-duration: 0.3s;
@@ -77,14 +96,22 @@
   font-weight: 200;
   font-size: 1.5rem;
 }
+.nav__bar .nav__bar--empresa .main__title--viajes {
+  margin: 1rem 1rem;
+  color: #323232;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
 .nav__bar ul {
   display: flex;
 }
 .nav__bar ul li {
-  margin: 0 2rem;
+  margin: 0 1rem;
   list-style: none;
 }
 .nav__bar ul li .link--index {
+  /*link de la barra de nav*/
   color: #f4f4f4;
   text-decoration: none;
   position: relative;
@@ -95,6 +122,7 @@
   letter-spacing: 0.2rem;
 }
 .nav__bar ul li .link--comenzamos {
+  /*link de la barra de nav*/
   color: #323232;
   text-decoration: none;
   position: relative;
@@ -105,6 +133,7 @@
   letter-spacing: 0.2rem;
 }
 .nav__bar ul li .link--promociones {
+  /*link de la barra de nav*/
   color: #f4f4f4;
   text-decoration: none;
   position: relative;
@@ -114,10 +143,33 @@
   font-family: "Oswald", sans-serif;
   letter-spacing: 0.2rem;
 }
+.nav__bar ul li .link--viajes {
+  /*link de la barra de nav*/
+  color: #323232;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+.nav__bar--comenzamos {
+  background-color: #fdf6ea;
+}
+
+.nav__bar--promo {
+  background-color: #504128;
+}
+
+.nav__bar--viajes {
+  background-color: #fdf6ea;
+}
 
 .inicio {
   background-color: rgba(0, 0, 0, 0.3);
-  background-image: url(/asset/images/index/playa.jpg);
+  background-image: url(../asset/images/index/playa.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -172,15 +224,17 @@
 
 .comenzamos__content {
   display: grid;
-  grid-template-areas: "comenzamos__img title title" "comenzamos__img text1 text1" "comenzamos__img btn1 btn2";
+  grid-template-areas: "title title title" "comenzamos__img text1 text1" "comenzamos__img btn1 btn2";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 3rem;
+  justify-self: center;
+  justify-content: center;
 }
 
 .comenzamos__img {
   grid-area: comenzamos__img;
-  margin-top: 10rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
@@ -191,14 +245,14 @@
   font-family: "Oswald", sans-serif;
   color: #323232;
   font-size: 3.5rem;
-  margin-top: 10rem;
+  margin-top: 8rem;
 }
 
 .text1 {
   grid-area: text1;
   font-family: "Roboto", sans-serif;
   margin-right: 4rem;
-  margin-top: 1rem;
+  margin-top: 0.1rem;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -229,6 +283,7 @@
 .btn-mod {
   align-self: center;
   justify-self: center;
+  margin-bottom: 1.5rem;
 }
 
 .btn-mod:hover,
@@ -262,36 +317,113 @@
   background-color: #504128;
 }
 
-/*main h2 {
-  color: $primary-color;
-  text-align: center;
-  margin-top: 3rem;
-  font-family: $secondary-text;
+.title__promociones {
+  display: inline-flex;
+  color: #f4f4f4;
+  width: 100%;
+  margin-top: 6rem;
+  font-family: "Oswald", sans-serif;
   font-size: 2.5rem;
-  border: 4px solid blue;
- }*/
+  justify-self: center;
+  justify-content: center;
+}
+
 .promo__contenedor {
   display: flex;
   flex-direction: row;
-  margin-top: 10rem;
-  border: 3px solid yellow;
-  width: 100rem;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  width: 80%;
   align-self: center;
   justify-self: center;
+  justify-content: center;
+  background-color: olive;
 }
 
-.box-contenedor {
-  border: 3px solid blue;
-  width: 32%;
-  height: 25rem;
-  text-align: center;
-  color: #f4f4f4;
-  margin: 1rem;
-  overflow: hidden;
-  object-fit: cover;
+.box-contenedor h3 {
+  margin: 5px 0;
+  font-family: "Roboto", sans-serif;
 }
-.box-contenedor img {
+.box-contenedor .box-contenedor__text {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+.box-contenedor .btn__promo {
+  margin-top: 1rem;
+}
+.box-contenedor .btn__promo:hover,
+.box-contenedor .btn__promo:focus,
+.box-contenedor .btn_promo:active {
+  box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+  transform: scale(1.2);
+  background-color: rgb(231, 139, 108);
+}
+
+ul,
+ol {
+  margin-left: 3rem;
+  text-align: left;
+}
+
+.viajes {
+  background-color: #fdf6ea;
+}
+
+.title__viaje {
+  display: inline-flex;
+  color: #323232;
   width: 100%;
+  margin-top: 6rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  justify-self: center;
+  justify-content: center;
+}
+
+.conteiner-viajes {
+  display: grid;
+  grid-template-areas: "conteiner-box1 conteiner-box2 conteiner-box3 conteiner-box4" "conteiner-box5 conteiner-box6 conteiner-box7 conteiner-box8";
+  grid-template-columns: 0.5fr 1.5fr 0.5fr 1.5fr;
+  grid-auto-rows: auto;
+  gap: 1rem;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+}
+
+.conteiner-box1 {
+  grid-area: conteiner-box1;
+}
+
+.conteiner-box2 {
+  grid-area: conteiner-box2;
+}
+
+.conteiner-box3 {
+  grid-area: conteiner-box3;
+}
+
+.conteiner-box4 {
+  grid-area: conteiner-box4;
+}
+
+.conteiner-box5 {
+  grid-area: conteiner-box5;
+}
+
+.conteiner-box6 {
+  grid-area: conteiner-box6;
+}
+
+.conteiner-box7 {
+  grid-area: conteiner-box7;
+}
+
+.conteiner-box8 {
+  grid-area: conteiner-box8;
 }
 
 /*# sourceMappingURL=style.css.map */

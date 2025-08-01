@@ -1,0 +1,46 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin-extend" as *;
+@use "../utilities/animaciones" as *;
+
+.viajes {
+    background-color: $bg-primary-color;
+}
+.title__viaje{
+@include title($secondary-color)  
+
+}
+.conteiner-viajes {
+    display: grid;
+    grid-template-areas: "conteiner-box1 conteiner-box2 conteiner-box3 conteiner-box4"
+    "conteiner-box5 conteiner-box6 conteiner-box7 conteiner-box8";
+    grid-template-columns: 0.50fr 1.5fr 0.50fr 1.5fr;    
+    grid-auto-rows: auto;
+    gap: 1rem;
+     align-self: center;
+  justify-self: center;
+  justify-content: center;
+}
+.conteiner-box1{
+    grid-area: conteiner-box1;
+}
+.conteiner-box2{
+    grid-area: conteiner-box2;
+}
+.conteiner-box3{
+    grid-area: conteiner-box3;
+}
+.conteiner-box4{
+    grid-area: conteiner-box4;
+}
+.conteiner-box5{
+    grid-area: conteiner-box5;
+}
+.conteiner-box6{
+    grid-area: conteiner-box6;
+}
+.conteiner-box7{
+    grid-area: conteiner-box7;
+}
+.conteiner-box8{
+    grid-area: conteiner-box8;
+}
